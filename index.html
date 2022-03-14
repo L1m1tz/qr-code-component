@@ -25,66 +25,107 @@
       }
 
       body {
+        height: 100vh;
         background: hsl(212, 45%, 89%);
         font-family: outfit, sans-serif;
         margin: auto;
         font-size: 15px;
         font-weight: 400;
-        border: 1px solid yellow;
-        /* font-weight: 700;*/
       }
 
-      img {
-        width: 40%;
-      }
-
-      #container {
-        display: flex;
-        border: 1px solid pink;
-        background-color: peru;
-      }
-
-      #container > div {
-        
-        background-color: green;
-      }
-      .center {
+      #page {
+        display: grid;
+        place-items: center;
+        height: 90%;
         margin: auto;
-        width: 50%;
-        border: 1px solid #ffff00;
+      }
+
+      .container {
+        border: 1px solid blue;
+        border-radius: 20px;
+        text-align: center;
+        background-color: hsl(0, 0%, 100%);
+        max-width: 15%;
+        padding: 15px;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-weight: 700;
+      }
+
+      .holder {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container > div {
+        word-wrap: break-word;
+      }
+      div > p {
+        background-color: white;
+        color: hsl(220, 15%, 55%);
+      }
+      a:link {
+        color: white;
+      }
+
+      a:hover {
+        color: yellow;
+      }
+
+      a:visited{
+        color: red;
       }
 
       footer {
-        background: yellow;
+        background: hsl(218, 44%, 22%);
+        height: 10%;
         padding: 0;
-    
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @media screen and (max-width: 750px) {
+        .container {
+          max-width: 60%;
+        }
       }
     </style>
   </head>
 
   <body>
-    <div id="container">
-      <div>
-        <img src="images/image-qr-code.png" alt="qr code image" />
-      </div>
-      <div>
-        <h1>Improve your front-end skills by building projects</h1>
-      </div>
-      <div>
-        <p>
-          Scan the QR code to visit Frontend Mentor and take your coding skills
-          to the next level
-        </p>
+    <div id="page">
+      <div class="container">
+        <div>
+          <img src="images/image-qr-code.png" alt="qr code image" />
+        </div>
+        <div>
+          <h2>Improve your front-end skills by building projects</h2>
+
+          <p>
+            Scan the QR code to visit Frontend <br />
+            Mentor and take your coding skills <br />
+            to the next level
+          </p>
+        </div>
       </div>
     </div>
-
     <footer>
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
           Frontend Mentor
         </a>
-        . Coded by <a href="#">Your Name Here</a>.
+        . Coded by <a href="Siteforge.co.za">Andrew Mk</a>.
       </div>
     </footer>
   </body>
